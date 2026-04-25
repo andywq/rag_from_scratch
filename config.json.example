@@ -1,0 +1,38 @@
+{
+  "mongodb": {
+    "uri": "mongodb://[user]:[pass]@[host]:[port]/[db]?authSource=[auth_db]",
+    "database": "[db]",
+    "collection": "[collection_name]",
+    "text_fields": [
+        "[filed1]",
+        "[filed2]",
+    ],
+    "id_field": "[id_field]"
+  },
+  "providers": {
+    "chat": {
+      "provider": "openai",
+      "base_url": "https://example.com/v1",
+      "api_key": "",
+      "model": "openai/gpt-5"
+    },
+    "embedding": {
+      "provider": "ollama",
+      "base_url": "https://example.com:11434",
+      "api_key": "",
+      "model": "qwen3-embedding:0.6b"
+    }
+  },
+  "retrieval": {
+    "top_k": 3
+  },
+  "storage": {
+    "index_path": "data/index.faiss",
+    "metadata_path": "data/metadata.jsonl"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "log_level": "info"
+  }
+}
